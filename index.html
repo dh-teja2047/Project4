@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="style.css"/ >
+    <title>Project4 Calculator</title>
+</head>
+<body>
+  <div class="container">
+    <div id ="display" class="display" > </div>
+      <br>
+      <div id=#keys class="keys">
+        <div class="keys1">
+          <button onclick="getInput(7)">7</button>
+          <button onclick="getInput(8)">8</button>
+          <button onclick="getInput(9)">9</button>
+          <button  style = "background-color: rgba(100, 114, 153, 1)" onclick="deleteDigits">Del</button>
+        </div>
+
+        <div class="keys2">
+          <button onclick="getInput(4)">4</button>
+          <button onclick="getInput(5)">5</button>
+          <button onclick="getInput(6)">6</button>
+          <button onclick="">+</button>
+        </div>
+
+        <div class="keys3">
+          <button onclick="getInput(1)">1</button>
+          <button onclick="getInput(2)">2</button>
+          <button onclick="getInput(3)">3</button>
+          <button onclick="">-</button>
+        </div>
+
+        <div class="keys4">
+          <button onclick="getInput(.)">.</button>
+          <button onclick="getInput(0)">0</button>
+          <button onclick="">/</button>
+          <button onclick="">*</button>
+        </div>
+
+        <div class="keys5">
+          <button style = "background-color: rgba(100, 114, 153, 1)" onclick="">RESET</button>
+          <button style = "background-color: rgba(209, 63, 48, 1)" onclick=""> = </button>
+        </div>
+
+      </div>
+    </div>
+   <script src="script.js" charset="utf-8"></script>
+</body>
+</html>
