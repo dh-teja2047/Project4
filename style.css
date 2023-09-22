@@ -18,7 +18,7 @@
   border-radius: 10px;
 }
 
-.keys1 button{
+.keys1 input{
   height: 60px;
   width: 100px;
   border-radius:12px;
@@ -30,7 +30,7 @@
 
 }
 
-.keys2 button{
+.keys2 input{
   height: 60px;
   width: 100px;
   border-radius:12px;
@@ -41,7 +41,7 @@
   background-color: rgba(234, 227, 219, 1);
 }
 
-.keys3 button{
+.keys3 input{
   height: 60px;
   width: 100px;
   border-radius:12px;
@@ -52,7 +52,7 @@
   background-color: rgba(234, 227, 219, 1);
 }
 
-.keys4 button{
+.keys4 input{
   height: 60px;
   width: 100px;
   border-radius:12px;
