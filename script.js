@@ -3,6 +3,10 @@ function getInput(input) {
   display.value +=input;
   console.log(display);
 }
+  
+function reset(){
+  document.getElementById("display").value= "0";
+}
 
 function  result(){
   var x = document.getElementById("display");
@@ -56,15 +60,17 @@ function  result(){
     console.log( y)
   console.log(typeof y)
   }
+  document.getElementById("display").value = y[0];
   i++
 }while(i<y.length)
-  
-function reset()
-{
-  var res = document.getElementById("display");
-  res.value ="";
-}
 
+
+function del()
+{
+  var d= document.getElementById("display");
+  d = d.length-1;
+  document.getElementById("display").value ="";
+}
 
   //const mathExpression = '89+21-10*1/1';
 //const resultArray = mathExpression.split(/(\+|-|\*|\/)/).filter(item => item !== '');
