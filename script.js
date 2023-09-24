@@ -5,21 +5,19 @@ function getInput(input) {
 }
   
 function reset(){
-  document.getElementById("display").value= "0";
+  document.getElementById("display").value= "";
 }
 
 function  result(){
   var x = document.getElementById("display");
   var y = x.value;
-  console.log( y)
-  console.log(typeof y)
+  var ap = '*1/1*1';
+  y= `${y}${ap}`;
   y = y.split(/(\+|-|\*|\/)/).filter(item => item !== '');
-  console.log( y)
-  console.log(typeof y)
-
   let i=0;
   do
 {
+  {
   if(y[1]=== '+')
   {
     var a = Number(y[0]) 
@@ -27,18 +25,25 @@ function  result(){
     a +=b;
     y.splice(0,3)
     y.unshift(a);
-    console.log( y)
-  console.log(typeof y)
   } 
-  else if(y[1]=== '-')
+  else if(y[1]=== '-' || y[0]==='-')
   {
-    var a = Number(y[0]) 
-    var b = Number(y[2]) 
-    a -=b;
-    y.splice(0,3)
-    y.unshift(a);
-    console.log( y)
-  console.log(typeof y)
+    if(y[1]=== '-'){
+      var a = Number(y[0]) 
+      var b = Number(y[2]) 
+      a -=b;
+      y.splice(0,3)
+      y.unshift(a);
+    }
+    else if (y[0]==='-'){
+      //`-${y[1]}`
+      var a = y[1]
+      a = Number(`-${a}`)
+      var b = Number(y[3])
+        a -=b;
+      y.splice(0,4)
+      y.unshift(a);
+    }
   }
   else if(y[1]=== '*')
   {
@@ -47,8 +52,6 @@ function  result(){
     a *=b;
     y.splice(0,3)
     y.unshift(a);
-    console.log( y)
-  console.log(typeof y)
   }
   else if(y[1]=== '/')
   {
@@ -57,10 +60,9 @@ function  result(){
     a /=b;
     y.splice(0,3)
     y.unshift(a);
-    console.log( y)
-  console.log(typeof y)
   }
-  document.getElementById("display").value = y[0];
+}
+document.getElementById('display').value = y[0];
   i++
 }while(i<y.length)
 }
